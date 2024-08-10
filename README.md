@@ -11,7 +11,7 @@ src/main/resources/application.properties
 - user@mail.com / 12345
 
 **Tables**
-```sql:
+```sql
 -- Eliminar tablas con CASCADE para manejar dependencias
 DROP TABLE IF EXISTS t_user_t_role CASCADE;
 DROP TABLE IF EXISTS t_user CASCADE;
@@ -52,3 +52,4 @@ INSERT INTO t_user_t_role (user_id, role_id) VALUES
 ((SELECT user_id FROM t_user WHERE username = 'admin@mail.com'), (SELECT role_id FROM t_role WHERE name = 'ROLE_ADMIN')),
 ((SELECT user_id FROM t_user WHERE username = 'admin@mail.com'), (SELECT role_id FROM t_role WHERE name = 'ROLE_USER')),
 ((SELECT user_id FROM t_user WHERE username = 'user@mail.com'), (SELECT role_id FROM t_role WHERE name = 'ROLE_USER'));
+```
