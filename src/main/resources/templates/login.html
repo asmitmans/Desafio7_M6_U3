@@ -24,7 +24,7 @@
 
 <div class="container pt-1">
     <div th:if="${param.error}" class="alert alert-danger" role="alert">
-        <strong>Error:</strong> <span>Error: Incorrect username or password.</span>
+        <strong>Error:</strong> <span>Incorrect username or password.</span>
     </div>
     <div th:if="${successMessage}" class="alert alert-success" role="alert">
         <strong>Success:</strong> <span th:text="${successMessage}"></span>
